@@ -521,7 +521,8 @@ endif
 libc_common_c_includes := \
 		$(LOCAL_PATH)/stdlib  \
 		$(LOCAL_PATH)/string  \
-		$(LOCAL_PATH)/stdio
+		$(LOCAL_PATH)/stdio   \
+		external/safe-iop/include
 
 # Needed to access private/__dso_handle.S from
 # crtbegin_xxx.S and crtend_xxx.S
