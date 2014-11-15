@@ -52,6 +52,15 @@ isnanf(float f)
 }
 
 int
+__isnanf(float f)
+{
+	union IEEEf2bits u;
+
+	u.f = f;
+	return (u.bits.exp == 255 && u.bits.man != 0);
+}
+
+int
 __isnanl(long double e)
 {
 	union IEEEl2bits u;
